@@ -1,12 +1,34 @@
 #include <iostream>
+#include <algorithm>
+#include "presentation.h"
+#include "io.h"
+#include <locale>
+#include <windows.h>
+
 
 int main() {
-    std::cout << "Âàðèàíò ¹3: Ïðîãðàììà êîíôåðåíöèè" << std::endl;
-    std::cout << "Àâòîð: Èâàíîâ Èâàí (ãðóïïà ÁÈÂÒ-22-3)" << std::endl;
-    std::cout << "------------------------------------" << std::endl;
-std::cout << "Группа: ИУ7-32Б\n";
+    SetConsoleOutputCP(1251);
+    SetConsoleCP(1251);
 
-    // Çäåñü ïîçæå áóäåò äîáàâëåíà ëîãèêà ïðîãðàììû
+    setlocale(LC_ALL, "Russian");
+    std::vector<Presentation> presentations = readPresentations("data.txt");
+
+    std::sort(presentations.begin(), presentations.end(), compareByStartTime);
+
+    for (const auto& p : presentations) {
+        std::cout << p.timeStart << " - " << p.timeEnd << " | "
+            << p.speakerFullName << " | "
+            << p.topic << "\n";
+    }
+
+    std::string name;
+    std::cout << "Vvtite FIO dliy poiska: ";
+    
+
+    std::getline(std::cin >> std::ws, name);
+    searchBySpeaker(presentations, name);
 
     return 0;
 }
+
+
