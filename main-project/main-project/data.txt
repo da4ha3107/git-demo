@@ -1,3 +1,9 @@
-09:00 09:20 Ivanov Ivan Ivanovich AIand Society
-10:00 10:30 Petrov Petr Petrovich Cybersecurity Trends
+10:00 10:30 Sidorova Anna Sergeevna Modern AIModels
 10:45 11:10 Ivanov Ivan Ivanovich NewProgramming Tech
+13:15 13:40 Kim Olga Olegovna UX Design
+14:00 14:25 Ivanov Ivan Ivanovich Struct Visualization
+11:15 11:45 Smirnov Alexey Igorevich Quantum Computing
+09:00 09:20 Ivanov Ivan Ivanovich AIand Society
+09:30 09:55 Petrov Petr Petrovich Cybersecurity Trends
+12:30 13:00 Petrov Petr Petrovich Ethical Hacking
+12:00 12:20 Egorova Elena Vladimirovna Robotics Future
