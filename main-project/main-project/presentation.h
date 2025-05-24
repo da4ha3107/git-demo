@@ -7,6 +7,7 @@ struct Presentation {
     std::string speakerFullName;
     std::string topic;
 };
+int getDurationInMinutes(const Presentation& p);
 
 bool compareByStartTime(const Presentation& a, const Presentation& b);
 
