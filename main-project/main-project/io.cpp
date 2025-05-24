@@ -1,6 +1,7 @@
 #include "io.h"
 #include <fstream>
 #include <iostream>
+#include <vector>
 
 std::vector<Presentation> readPresentations(const std::string& filename) {
     std::ifstream file(filename);

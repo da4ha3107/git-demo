@@ -1,5 +1,7 @@
 #include "presentation.h"
 #include <sstream>
+#include <vector>
+
 int getDurationInMinutes(const Presentation& p) {
     int h1, m1, h2, m2;
     char colon;

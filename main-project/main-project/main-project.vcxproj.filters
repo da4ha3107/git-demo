@@ -32,16 +32,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="presentation.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="io.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="file_reader.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="sort.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="io.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="presentation.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

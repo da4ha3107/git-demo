@@ -1,5 +1,6 @@
 #include "sort.h"
 #include <algorithm>
+#include <vector>
 
 bool compareByDurationDesc(const Presentation* a, const Presentation* b) {
     return getDurationInMinutes(*a) > getDurationInMinutes(*b);

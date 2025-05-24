@@ -1,6 +1,7 @@
 #include "file_reader.h"
 #include <fstream>
 #include <sstream>
+#include <vector>
 
 std::vector<Presentation> readFromFile(const std::string& filename) {
     std::ifstream file(filename);

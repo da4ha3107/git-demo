@@ -1,9 +1,10 @@
 #include <iostream>
 #include <algorithm>
-#include "presentation.h"
-#include "io.h"
+#include <vector>
 #include <locale>
 #include <windows.h>
+#include "presentation.h"
+#include "io.h"
 #include "file_reader.h"
 #include "sort.h"
 
@@ -28,25 +29,28 @@ int main() {
     std::cout << "Vyberite kriteriy sortirovki:\n0 - Po ubivaniyu dlyitelnosti\n1 - Po FIO i teme\n> ";
     std::cin >> compareChoice;
 
-    Presentation* ptrs[presentations.size()];
+    std::vector<Presentation*> ptrs(presentations.size());
     for (size_t i = 0; i < presentations.size(); ++i)
         ptrs[i] = &presentations[i];
 
     SortFunc sortMethods[] = { heapSort, mergeSort };
     CompareFunc compareMethods[] = { compareByDurationDesc, compareByNameAndTopic };
 
-    sortMethods[sortChoice](ptrs, presentations.size(), compareMethods[compareChoice]);
+    sortMethods[sortChoice](ptrs.data(), presentations.size(), compareMethods[compareChoice]);
 
     std::cout << "\nOtsortirovannye dannye:\n-----------------------------\n";
     for (size_t i = 0; i < presentations.size(); ++i)
         std::cout << ptrs[i]->timeStart << " - " << ptrs[i]->timeEnd << " | "
         << ptrs[i]->speakerFullName << " | " << ptrs[i]->topic << "\n";
 
-    
     std::string name;
     std::cout << "Vvedite FIO dliy poiska: ";
     std::getline(std::cin >> std::ws, name);
-    searchBySpeaker(presentations, name);
+    std::vector<Presentation> sortedPresentations;
+    for (Presentation* p : ptrs)
+        sortedPresentations.push_back(*p);
+    searchBySpeaker(sortedPresentations, name);
+
 
     return 0;
 }
