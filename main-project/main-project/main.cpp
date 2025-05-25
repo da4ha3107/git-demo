@@ -40,6 +40,7 @@ int main() {
 
     sortMethods[sortChoice](ptrs.data(), presentations.size(), compareMethods[compareChoice]);
 
+
     std::cout << "\nOtsortirovannye dannye:\n-----------------------------\n";
     for (size_t i = 0; i < presentations.size(); ++i)
         std::cout << ptrs[i]->timeStart << " - " << ptrs[i]->timeEnd << " | "

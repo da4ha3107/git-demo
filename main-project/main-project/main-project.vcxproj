@@ -131,7 +131,9 @@
     <ClCompile Include="io.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="presentation.cpp" />
-    <ClCompile Include="process.cpp" />
+    <ClCompile Include="process.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="sort.cpp" />
   </ItemGroup>
   <ItemGroup>
