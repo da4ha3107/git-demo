@@ -3,7 +3,7 @@
 #include <vector>
 #include <iostream>
 
-//вычисления длительности доклада
+// вычисления длительности доклада
 int getDurationInMinutes(const Presentation& p) {
     int h1, m1, h2, m2;
     char colon;
@@ -13,7 +13,7 @@ int getDurationInMinutes(const Presentation& p) {
     return (h2 * 60 + m2) - (h1 * 60 + m1);
 }
 
-// сравнения по времени начала
+//Функция сравнения по времени начала
 bool compareByStartTime(const Presentation& a, const Presentation& b) {
     return a.timeStart < b.timeStart;
 }
@@ -28,7 +28,7 @@ void filterBySpeaker(const std::vector<Presentation>& presentations, const std::
     }
 }
 
-//фильтрация по длительности доклада (больше `minDuration` минут)
+//по длительности доклада (больше `minDuration` минут)
 void filterByDuration(const std::vector<Presentation>& presentations, int minDuration) {
     std::cout << "Доклады длительностью больше " << minDuration << " минут:\n";
     for (const auto& p : presentations) {
