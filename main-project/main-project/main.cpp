@@ -13,7 +13,7 @@ int main() {
     SetConsoleCP(1251);
     setlocale(LC_ALL, "Russian");
 
-    std::cout << "Students Group: 24PI1d; "; 
+    std::cout << "Students Group: 24PI1d\n";
 
     std::vector<Presentation> presentations = readFromFile("data.txt");
 
@@ -45,14 +45,30 @@ int main() {
         std::cout << ptrs[i]->timeStart << " - " << ptrs[i]->timeEnd << " | "
         << ptrs[i]->speakerFullName << " | " << ptrs[i]->topic << "\n";
 
+    // ?? Вставляем выбор фильтра перед поиском ФИО
+    int filterChoice;
+    std::cout << "\nVyberite fil'tr:\n1 - Po FIO\n2 - Po dlyitel'nosti (>15 min)\n> ";
+    std::cin >> filterChoice;
+
+    if (filterChoice == 1) {
+        std::string name;
+        std::cout << "Vvedite FIO: ";
+        std::cin.ignore();
+        std::getline(std::cin, name);
+        filterBySpeaker(presentations, name);
+    }
+    else if (filterChoice == 2) {
+        filterByDuration(presentations, 15);
+    }
+
+    // ?? Оставляем поиск по ФИО после фильтрации
     std::string name;
-    std::cout << "Vvedite FIO dliy poiska: ";
+    std::cout << "\nVvedite FIO dlya poiska: ";
     std::getline(std::cin >> std::ws, name);
     std::vector<Presentation> sortedPresentations;
     for (Presentation* p : ptrs)
         sortedPresentations.push_back(*p);
     searchBySpeaker(sortedPresentations, name);
-
 
     return 0;
 }
