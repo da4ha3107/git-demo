@@ -13,6 +13,8 @@ int main() {
     SetConsoleCP(1251);
     setlocale(LC_ALL, "Russian");
 
+    std::cout << "Students Group: 24PI1d; "; 
+
     std::vector<Presentation> presentations = readFromFile("data.txt");
 
     std::sort(presentations.begin(), presentations.end(), compareByStartTime);

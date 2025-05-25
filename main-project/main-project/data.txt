@@ -7,3 +7,5 @@
 09:30 09:55 Petrov Petr Petrovich Cybersecurity Trends
 12:30 13:00 Petrov Petr Petrovich Ethical Hacking
 12:00 12:20 Egorova Elena Vladimirovna Robotics Future
+15:00 15:30 Ivanova Marina NikolaevnaCloud Security
+16:00 16:25 Smirnov Alexey Igorevich AIEthics
