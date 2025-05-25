@@ -47,7 +47,7 @@ int main() {
 
     // ?? Вставляем выбор фильтра перед поиском ФИО
     int filterChoice;
-    std::cout << "\nVyberite fil'tr:\n1 - Po FIO\n2 - Po dlyitel'nosti (>15 min)\n> ";
+    std::cout << "\nVyberite filtr:\n1 - Po FIO\n2 - Po dlyitelnosti (>15 min)\n> ";
     std::cin >> filterChoice;
 
     if (filterChoice == 1) {
